@@ -17,12 +17,13 @@ import AddDriver from "../pages/Driver/AddDriver";
 import EditDriver from "../pages/Driver/EditDriver";
 import ViewDriver from "../pages/Driver/ViewDriver";
 import FAQ from "../pages/FAQ/FAQ";
-import CMSPage from "../pages/CMS";
 import Terms from "../pages/CMSPage/TermsCondition";
 import PrivacyPolicy from "../pages/CMSPage/PrivacyPolicy";
 import AboutUs from "../pages/CMSPage/AboutUs";
 import VerifyEmail from "../pages/Auth/VerifyEmail";
 import TermsConditionForm from "../pages/CMS/TermsConditionForm";
+import PrivacyPolicyForm from "../pages/CMS/PrivacyPolicyForm";
+import AboutUsForm from "../pages/CMS/AboutUsForm";
 
 export const AppRouter = () => {
   const { t } = useTranslation();
@@ -114,25 +115,25 @@ export const AppRouter = () => {
           path: "/player/view",
           element: <ViewDriver />,
         },
+        // FAQ
+        {
+          path: "/faq",
+          element: <FAQ />,
+        },
         // Terms and Conditions
         {
-          path: "/terms-and-conditions",
+          path: "/terms-conditions",
           element: <TermsConditionForm />,
         },
         // Privacy Policy
         {
           path: "/privacy-policy",
-          element: <CMSPage title={t("cms.privacyPolicy")} />,
+          element: <PrivacyPolicyForm />,
         },
         // About Us
         {
           path: "/about-us",
-          element: <CMSPage title={t("cms.aboutUs")} />,
-        },
-        // FAQ
-        {
-          path: "/faq",
-          element: <FAQ />,
+          element: <AboutUsForm />,
         },
       ],
     },
