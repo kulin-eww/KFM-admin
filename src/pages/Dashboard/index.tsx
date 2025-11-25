@@ -19,7 +19,6 @@ import TotalBookings from "./TotalBookings";
 import BookingOverview from "./BookingOverview";
 import BookingVolume from "./BookingVolume";
 import Driver from "./Driver";
-import ActiveOrder from "./ActiveOrder";
 import { useState } from "react";
 import ReminderDialog from "./ReminderDialog";
 import ViolationDialog from "./ViolationDialog";
@@ -53,13 +52,12 @@ const Dashboard = () => {
         {/* Top Section: Bookings Overview + Earnings */}
         <Reminder data={handleGetDashboardDetails?.data?.data?.notifications} />
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-          <ActiveOrder data={handleGetDashboardDetails?.data?.data?.activeBookings} />
           <Earnings data={handleGetDashboardDetails?.data?.data?.overView} />
           <TotalBookings data={handleGetDashboardDetails?.data?.data?.overView} />
           <Driver data={handleGetDashboardDetails?.data?.data?.overView} />
           <Container data={handleGetDashboardDetails?.data?.data?.overView} />
         </div>
-        
+
         <div className="gap-4">
           <BookingOverview />
           {/* <BookingVolume /> */}
