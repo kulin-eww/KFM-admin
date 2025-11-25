@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import PageNotFound from "../pages/Errors/PageNotFound";
@@ -35,7 +35,8 @@ export const AppRouter = () => {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <Navigate to="/dashboard" replace />,
+          // element: <Home />,
         },
         {
           path: "/privacy",
