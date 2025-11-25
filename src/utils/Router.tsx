@@ -117,7 +117,7 @@ export const AppRouter = () => {
         // Terms and Conditions
         {
           path: "/terms-and-conditions",
-          element: <TermsConditionForm />,
+          element: <TermsConditionForm action="view" cmsContent={null} title="terms_and_conditions" role="web" />,
         },
         // Privacy Policy
         {

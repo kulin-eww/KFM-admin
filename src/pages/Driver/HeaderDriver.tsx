@@ -20,7 +20,7 @@ const HeaderDriver: React.FC<{
       <div className="flex sm:flex-row flex-col justify-between items-center px-2 mb-2">
         <div className="text-xl font-bold mb-2">Player Management</div>
         <div className="flex gap-2">
-          {/* <Button
+          <Button
             id="filter-menu"
             variant="contained"
             startIcon={<Filter className="h-4" />}
@@ -32,9 +32,9 @@ const HeaderDriver: React.FC<{
               setAnchorElId("filter-menu");
             }}
           >
-            {t("driver.filter")}
-          </Button> */}
-          <Button
+            Filter
+          </Button>
+          {/* <Button
             variant="contained"
             startIcon={<Plus />}
             onClick={() => {
@@ -42,7 +42,7 @@ const HeaderDriver: React.FC<{
             }}
           >
             Add Player
-          </Button>
+          </Button> */}
         </div>
       </div>
       <FilterMenu

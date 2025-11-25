@@ -43,7 +43,7 @@ const FilterMenu = ({ anchorElId, setAnchorElId, menuId, render }) => {
           left: `${buttonPosition.left}px`,
         }}
       >
-        <div className="bg-white rounded-lg border  border-gray-300 shadow-lg overflow-y-auto">{render}</div>
+        <div className="bg-white rounded-lg border p-2 border-gray-300 shadow-lg overflow-y-auto">{render}</div>
       </div>
     </>,
     document.body

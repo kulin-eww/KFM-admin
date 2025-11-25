@@ -50,7 +50,7 @@ const ListDriver: React.FC<{
   const [rows, setRows] = useState(data);
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  
+
   useEffect(() => {
     setRows(data || []);
   }, [data]);
@@ -71,7 +71,7 @@ const ListDriver: React.FC<{
     { key: "id", label: t("driver.id"), sortable: true, accessor: (row: any) => row?.id },
     {
       key: "name",
-      label: t("driver.driver"),
+      label: "Player",
       sortable: true,
       render: (row: any) => {
         return (
@@ -87,22 +87,6 @@ const ListDriver: React.FC<{
     { key: "phone", label: t("driver.phone"), sortable: true },
     { key: "email", label: t("driver.email"), sortable: true },
     {
-      key: "status",
-      label: t("driver.status"),
-      sortable: false,
-      render: (row: any) => (
-        <Switch
-          checked={row?.status}
-          onChange={() => {
-            toggleMutation.mutate(row.id);
-          }}
-          slotProps={{
-            input: { "aria-label": "Activate/Deactivate" },
-          }}
-        />
-      ),
-    },
-    {
       key: "availability_status",
       label: t("driver.availability"),
       sortable: false,
@@ -112,7 +96,7 @@ const ListDriver: React.FC<{
             {row.availability_status ? (
               <Chip label={t("driver.available")} color="primary" variant="outlined" sx={{ borderRadius: 1 }} />
             ) : (
-              <Chip label={t("driver.unavailable")} color="warning" variant="outlined" sx={{borderRadius: 1}} />
+              <Chip label={t("driver.unavailable")} color="warning" variant="outlined" sx={{ borderRadius: 1 }} />
             )}
           </>
         );
@@ -150,7 +134,7 @@ const ListDriver: React.FC<{
                   icon: EyeIcon,
                   label: t("driver.view"),
                   onClick: () => {
-                    navigate(`/driver/view?id=${row?.id}`);
+                    navigate(`/player/view?id=${row?.id}`);
                     setAnchorElId(null);
                   },
                 },
@@ -158,13 +142,13 @@ const ListDriver: React.FC<{
                   icon: PencilIcon,
                   label: t("driver.edit"),
                   onClick: () => {
-                    navigate(`/driver/edit?id=${row?.id}`);
+                    navigate(`/player/edit?id=${row?.id}`);
                     setAnchorElId(null);
                   },
                 },
                 {
                   icon: TrashIcon,
-                  label: t("driver.delete"),
+                  label: "Delete",
                   onClick: () => {
                     handleDeleteDriver(row?.id);
                     setAnchorElId(null);
