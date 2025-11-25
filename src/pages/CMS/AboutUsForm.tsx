@@ -10,7 +10,7 @@ import { updateCMSDetailAPI } from "../../api/cms";
 import useToast from "../../hooks/useToast";
 import Loader from "../../components/Loader/Loader";
 
-const TermsConditionForm = () => {
+const AboutUsForm = () => {
   const [searchParams] = useSearchParams();
   const cmsId = searchParams.get("id");
   const navigate = useNavigate();
@@ -71,7 +71,7 @@ const TermsConditionForm = () => {
           >
             <ArrowLeftIcon className="h-5 cursor-pointer" />
           </div>
-          <div className="text-xl font-bold">Terms and Conditions</div>
+          <div className="text-xl font-bold">About Us</div>
         </div>
         <div className="w-full bg-bg-secondary px-8 py-4 rounded-xl">
           {false && <Loader />}
@@ -145,4 +145,4 @@ const TermsConditionForm = () => {
   );
 };
 
-export default TermsConditionForm;
+export default AboutUsForm;

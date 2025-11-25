@@ -24,7 +24,7 @@ import {
 } from "../../components/common/icons";
 import { useTranslation } from "react-i18next";
 import { GiTabletopPlayers } from "react-icons/gi";
-import { RiGamepadLine } from "react-icons/ri";
+import { RiGamepadLine, RiNumber1 } from "react-icons/ri";
 import { TbDeviceGamepad3 } from "react-icons/tb";
 import { BiPurchaseTagAlt } from "react-icons/bi";
 import { FaRegCircleQuestion } from "react-icons/fa6";
@@ -33,7 +33,7 @@ import { LiaUserSecretSolid } from "react-icons/lia";
 import { LuMilestone } from "react-icons/lu";
 import { RiAdvertisementLine } from "react-icons/ri";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
-import { MdInfoOutline } from "react-icons/md";
+import { MdInfoOutline, MdOutlineCategory } from "react-icons/md";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -81,9 +81,9 @@ const Sidebar = () => {
       icon: FaRegCircleQuestion,
     },
     {
-      label: "1000 Point Category questions management",
+      label: "1000 Point Category questions",
       path: "/earnings",
-      icon: TbCircleNumber1,
+      icon: MdOutlineCategory,
     },
     {
       label: "Mystery wildcard category",

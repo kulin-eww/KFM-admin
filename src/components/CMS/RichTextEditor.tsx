@@ -45,7 +45,7 @@ export default function RichTextEditor({
             modules={modules}
             formats={formats}
             className={`rich-editor ${isRTL ? "rtl" : "ltr"}`}
-            style={{ height: "300px" }} // 👈 height of the entire editor
+            style={{ height: "500px" }} // 👈 height of the entire editor
           />
         </div>
       </div>
