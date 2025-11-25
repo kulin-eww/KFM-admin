@@ -1,0 +1,13 @@
+ <svg
+        className="rounded-full"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M-5.00183 -0.00119781H4.99791V19.9987H-5.00183V-0.00119781Z" fill="#CD0E26" />
+        <path d="M4.99792 13.2495H24.9991V20.0005H4.99792V13.2495Z" fill="black" />
+        <path d="M4.99792 6.7493H25.0009V13.2491H4.99792V6.7493Z" fill="white" />
+        <path d="M4.99792 -0.00119781H24.9991V6.74883H4.99792V-0.00119781Z" fill="#009E49" />
+      </svg>

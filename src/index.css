@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Changa';
+  src: url('assets/font/Changa-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("assets/font/Changa-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("assets/font/Changa-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("assets/font/Changa-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("assets/font/Changa-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Changa";
+  src: url("assets/font/Changa-Bold.ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+
+  --color-layout-bg: #FFFFFF;
+/* --color-layout-bg: #F7F7F7; */
+  --color-primary: #C3DC78;
+  --color-hover-green: #C3DC78;
+  --color-green-3: #219564;
+  --color-border-primary: #DFDFDF;
+
+  --color-blue: #007bff;
+  --color-indigo: #6610f2;
+  --color-purple: #7367f0;
+  --color-pink: #e83e8c;
+  --color-red: #ea5455;
+  --color-warning: #ff8228;
+  --color-teal: #20c997;
+  --color-cyan: #00cfe8;
+  --color-gray-500: #a7a7a6;
+}
+
+@theme {
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-layout-bg: var(--color-layout-bg);
+  --font-changa: "Changa";
+
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-tertiary: var(--color-text-tertiary);
+  --color-hover-green: var(--color-hover-green);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-gray-400);
+
+  --color-border-primary: var(--color-border-primary);
+
+  --color-green-3: var(--color-green-3);
+  --color-hover-green: var(--color-hover-green);
+  --color-sider-active: var(--color-sider-active);
+  --color-purple: var(--color-purple);
+  --color-teal: var(--color-teal);
+  --color-red: var(--color-red);
+  --color-warning: var(--color-warning);
+}
+
+/* Add dark mode variables */
+body {
+  font-family: var(--font-changa);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.sidebar-active {
+  background-color: var(--color-hover-green) !important;
+  color: #000000 !important;
+}
+
+.sidebar-item:hover {
+  background-color: var(--color-hover-green);
+  color: #000000 !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hide scrollbar across all major browsers */
+.sidebar-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-scroll {
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply bg-transparent w-1 h-0.5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-[#58584c3d];
+}
+
+::-webkit-scrollbar {
+  width: 1px !important;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-secondary);
+}
+
+/* Ensure helper text is always left-aligned, even in RTL mode */
+html[dir="rtl"] .MuiFormHelperText-root {
+  text-align: right !important;
+}
