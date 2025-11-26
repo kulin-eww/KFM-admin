@@ -40,7 +40,7 @@ const Earnings: React.FC<{ data: any }> = ({ data }) => {
                   </span>
                   {t("dashboard.thisMonth")}
                 </div>
-                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.thisMonthEarning} SAR</div>
+                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.thisMonthEarning}</div>
                 <div
                   className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/earnings")}
@@ -74,7 +74,7 @@ const Earnings: React.FC<{ data: any }> = ({ data }) => {
                   </span>
                   {t("dashboard.totalEarnings")}
                 </div>
-                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.totalEarning} SAR</div>
+                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.totalEarning}</div>
                 <div
                   className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/earnings")}

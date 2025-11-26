@@ -80,7 +80,7 @@ const BookingOverview = () => {
     labels: handleGetDashboardDetailsCharts?.data?.data?.map((item) => item.month),
     datasets: [
       {
-        label: "Bookings",
+        label: "Matches",
         data: handleGetDashboardDetailsCharts?.data?.data?.map((item) => item.total_booking),
         borderColor: "#16a34a",
         backgroundColor: "rgba(22, 163, 74, 0.1)",
@@ -110,7 +110,7 @@ const BookingOverview = () => {
           },
           label: (tooltipItem: any) => {
             const index = tooltipItem.dataIndex;
-            return `SAR ${handleGetDashboardDetailsCharts?.data?.data?.[index]?.total_amount.toLocaleString()}`; // show amount
+            return `${handleGetDashboardDetailsCharts?.data?.data?.[index]?.total_amount.toLocaleString()}`; // show amount
           },
         },
       },

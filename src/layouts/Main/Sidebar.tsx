@@ -60,51 +60,51 @@ const Sidebar = () => {
       path: "/player",
       icon: GiTabletopPlayers,
     },
-    {
-      label: "Game Category Management",
-      path: "/container",
-      icon: RiGamepadLine,
-    },
-    {
-      label: "Gameplay Package Management",
-      path: "/operations",
-      icon: TbDeviceGamepad3,
-    },
-    {
-      label: "Purchase History of Game Points",
-      path: "/booking-request",
-      icon: BiPurchaseTagAlt,
-    },
-    {
-      label: "Questions and Answer Management",
-      path: "/earnings",
-      icon: FaRegCircleQuestion,
-    },
-    {
-      label: "1000 Point Category questions",
-      path: "/earnings",
-      icon: MdOutlineCategory,
-    },
-    {
-      label: "Mystery wildcard category",
-      path: "/penalty-payment",
-      icon: LiaUserSecretSolid,
-    },
-    {
-      label: "Milestone management",
-      path: "/reports",
-      icon: LuMilestone,
-    },
-    {
-      label: "Sponsor’s Ads management",
-      path: "/reports",
-      icon: RiAdvertisementLine,
-    },
-    {
-      label: "Earning History and Report ",
-      path: "/reports",
-      icon: FaRegMoneyBillAlt,
-    },
+    // {
+    //   label: "Game Category Management",
+    //   path: "/container",
+    //   icon: RiGamepadLine,
+    // },
+    // {
+    //   label: "Gameplay Package Management",
+    //   path: "/operations",
+    //   icon: TbDeviceGamepad3,
+    // },
+    // {
+    //   label: "Purchase History of Game Points",
+    //   path: "/booking-request",
+    //   icon: BiPurchaseTagAlt,
+    // },
+    // {
+    //   label: "Questions and Answer Management",
+    //   path: "/earnings",
+    //   icon: FaRegCircleQuestion,
+    // },
+    // {
+    //   label: "1000 Point Category questions",
+    //   path: "/earnings",
+    //   icon: MdOutlineCategory,
+    // },
+    // {
+    //   label: "Mystery wildcard category",
+    //   path: "/penalty-payment",
+    //   icon: LiaUserSecretSolid,
+    // },
+    // {
+    //   label: "Milestone management",
+    //   path: "/reports",
+    //   icon: LuMilestone,
+    // },
+    // {
+    //   label: "Sponsor’s Ads management",
+    //   path: "/reports",
+    //   icon: RiAdvertisementLine,
+    // },
+    // {
+    //   label: "Earning History and Report ",
+    //   path: "/reports",
+    //   icon: FaRegMoneyBillAlt,
+    // },
     {
       label: t("sidebar.faqs"),
       path: "/faq",

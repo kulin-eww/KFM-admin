@@ -50,7 +50,7 @@ const Dashboard = () => {
         </button>
       </div> */}
         {/* Top Section: Bookings Overview + Earnings */}
-        <Reminder data={handleGetDashboardDetails?.data?.data?.notifications} />
+        {/* <Reminder data={handleGetDashboardDetails?.data?.data?.notifications} /> */}
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
           <Earnings data={handleGetDashboardDetails?.data?.data?.overView} />
           <TotalBookings data={handleGetDashboardDetails?.data?.data?.overView} />

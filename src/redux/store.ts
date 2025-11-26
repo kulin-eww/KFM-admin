@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import vendorReducer from "./slices/vendorSlice";
+import adminReducer from "./slices/adminSlice";
 import uiReducer from "./slices/uiSlice";
 import searchReducer from "./slices/searchSlice"
 
 export const store = configureStore({
   reducer: {
-    user: vendorReducer,
+    admin: adminReducer,
     ui: uiReducer,
     globalSearch: searchReducer
   },

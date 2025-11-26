@@ -320,83 +320,11 @@ const FormDriver: React.FC<{
                   rows={2}
                   disabled={action === "view"}
                 />
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                  <FileUploadInput
-                    label={t("driver.profileImage")}
-                    name="profile_image"
-                    value={formik.values.profile_image}
-                    accept="image/*"
-                    onChange={(file) => {
-                      formik.setFieldTouched("profile_image", true, true);
-                      formik.setFieldValue("profile_image", file, true);
-                    }}
-                    error={formik.touched.profile_image && Boolean(formik.errors.profile_image)}
-                    helperText={
-                      formik.touched.profile_image && formik.errors.profile_image
-                        ? (formik.errors.profile_image as string)
-                        : ""
-                    }
-                  />
-
-                  <div className="flex flex-col gap-2 mt-1">
-                    <div className="flex md:flex-row flex-col gap-2 mt-1">
-                      <TextField
-                        fullWidth
-                        label={t("driver.licenseNumber")}
-                        name="license_number"
-                        type="text"
-                        placeholder={t("driver.driverLicence")}
-                        value={formik.values.license_number ?? ""}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        error={formik.touched.license_number && Boolean(formik.errors.license_number)}
-                        helperText={formik.touched.license_number && (formik.errors.license_number as string)}
-                        disabled={action === "view"}
-                      />
-                      <TextField
-                        fullWidth
-                        label={t("driver.licenseExpiryDate")}
-                        name="license_expiry_date"
-                        type="date"
-                        placeholder={t("driver.driverlicenceexpire")}
-                        value={formik.values.license_expiry_date ?? ""}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        error={formik.touched.license_expiry_date && Boolean(formik.errors.license_expiry_date)}
-                        helperText={formik.touched.license_expiry_date && (formik.errors.license_expiry_date as string)}
-                        disabled={action === "view"}
-                        slotProps={{
-                          input: {
-                            inputProps: {
-                              min: new Date().toISOString().split("T")[0],
-                            },
-                          },
-                        }}
-                      />
-                    </div>
-                    <FileUploadInput
-                      label={t("driver.drivingLicense")}
-                      name="driving_license_front"
-                      value={formik.values.driving_license_front}
-                      accept=".pdf"
-                      onChange={(file) => {
-                        formik.setFieldTouched("driving_license_front", true, true);
-                        formik.setFieldValue("driving_license_front", file, true);
-                      }}
-                      error={formik.touched.driving_license_front && Boolean(formik.errors.driving_license_front)}
-                      helperText={
-                        formik.touched.driving_license_front && formik.errors.driving_license_front
-                          ? (formik.errors.driving_license_front as string)
-                          : ""
-                      }
-                    />
-                  </div>
-                </div>
               </div>
               {(action === "add" || action === "edit") && (
                 <div className="flex flex-wrap justify-end gap-2 mt-6">
                   <Button
-                    variant="outlined"
+                    variant="cancel"
                     sx={{
                       px: { xs: 3, sm: 6 }, // responsive padding: small on mobile, bigger on desktop
                       py: 1.5,
