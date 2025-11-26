@@ -130,6 +130,9 @@ export const getMuiTheme = () => {
             //   color: "#9e9e9e",
             //   boxShadow: "none",
             // },
+            loadingIndicator: {
+              color: palette.buttonText,
+            }
           },
         },
         variants: [

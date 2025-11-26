@@ -2,30 +2,10 @@ import axiosInstance from "../utils/axios";
 
 export const loginAPI = async (payload: { email: string; password: string }) => {
   try {
-    const response = await axiosInstance.post("/api/vendor/auth/login", {
+    const response = await axiosInstance.post("/api/admin/auth/login", {
       ...payload,
       device_type: "web",
       device_token: localStorage.getItem("fcmToken") ?? "",
-    });
-    return response.data;
-  } catch (error: any) {
-    throw error.response.data;
-  }
-};
-
-export const signupAPI = async (payload: {
-  company_name: string;
-  email: string;
-  tax_number: string;
-  commercial_register_number: string;
-  license_number: string;
-  password: string;
-}) => {
-  try {
-    const response = await axiosInstance.post("/api/vendor/auth/register", {
-      ...payload,
-      device_type: "web",
-      device_token: "asdfgh",
     });
     return response.data;
   } catch (error: any) {
@@ -55,20 +35,10 @@ export const resetPasswordAPI = async (payload: { token: string; newPassword: st
 
 export const logoutAPI = async () => {
   try {
-    const response = await axiosInstance.get("/api/vendor/auth/logout");
+    // const response = await axiosInstance.get("/api/vendor/auth/logout");
+    const response = { data: { message: "Logged out successfully" } };
     localStorage.clear();
     sessionStorage.clear();
-    return response.data;
-  } catch (error: any) {
-    throw error.response.data;
-  }
-};
-
-export const verifyEmailAPI = async (payload: { token: string; email: string }) => {
-  try {
-    const response = await axiosInstance.get("/api/vendor/auth/verify-email", {
-      params: { token: payload.token, email: payload.email },
-    });
     return response.data;
   } catch (error: any) {
     throw error.response.data;

@@ -20,11 +20,7 @@ const SignIn = () => {
     mutationFn: loginAPI,
     onSuccess: (res) => {
       localStorage.setItem("token", res.data.token);
-      if (!res?.data?.user?.is_kyc) {
-        navigate("/setup/account", { state: { email: res?.data?.user?.email } });
-      } else {
-        navigate("/dashboard");
-      }
+      navigate("/dashboard");
       resetForm();
       useToast(res.message);
     },
@@ -57,7 +53,13 @@ const SignIn = () => {
 
   return (
     <>
-      <form noValidate onSubmit={handleSubmit}>
+      <div className="flex flex-col gap-3 my-2">
+        <div className="font-bold text-center text-3xl">Sign In To Your Account</div>
+        <p className="font-medium tracking-wide text-center text-md text-secondary">
+          Securely access your dashboard and manage platform controls
+        </p>
+      </div>
+      <form noValidate onSubmit={handleSubmit} className="mt-8">
         <div className="flex flex-col justify-center items-center gap-4 w-full sm:w-100 md:w-120 lg:w-100 xl:w-120">
           <TextField
             fullWidth

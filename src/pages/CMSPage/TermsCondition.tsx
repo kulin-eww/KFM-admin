@@ -36,7 +36,7 @@ const Terms = () => {
     <div className="min-h-screen bg-[#F7F7F7] flex flex-col">
       <main className="flex-1">
         <section className="lg:py-16 py-10">
-          <div className="max-w-[84rem] mx-auto px-4">
+          <div className="max-w-336 mx-auto px-4">
             <h1 className="text-primary text-2xl/tight font-extrabold md:mb-6 mb-4">{t("cms.termsAndConditions")}</h1>
             <div className="bg-white md:p-6 p-4 rounded-2xl">
               {isLoading && (

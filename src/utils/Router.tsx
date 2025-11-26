@@ -1,5 +1,4 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 import PageNotFound from "../pages/Errors/PageNotFound";
 import MainLayout from "../layouts/Main";
@@ -9,7 +8,6 @@ import Home from "../pages/Home";
 import SignIn from "../pages/Auth/SignIn";
 import ForgotPassword from "../pages/Auth/ForgotPassword";
 import ResetPassword from "../pages/Auth/ResetPassword";
-import SetUpProfile from "../pages/SetUpProfile";
 import Dashboard from "../pages/Dashboard";
 import Profile from "../pages/Profile";
 import Driver from "../pages/Driver";
@@ -26,36 +24,15 @@ import PrivacyPolicyForm from "../pages/CMS/PrivacyPolicyForm";
 import AboutUsForm from "../pages/CMS/AboutUsForm";
 
 export const AppRouter = () => {
-  const { t } = useTranslation();
-
   const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <HomeLayout />,
-      children: [
-        {
-          path: "/",
-          element: <Navigate to="/dashboard" replace />,
-          // element: <Home />,
-        },
-        {
-          path: "/privacy",
-          element: <PrivacyPolicy />,
-        },
-        {
-          path: "/terms",
-          element: <Terms />,
-        },
-        {
-          path: "/about",
-          element: <AboutUs />,
-        },
-      ],
-    },
     {
       path: "/",
       element: <AuthLayout />,
       children: [
+        {
+          path: "/",
+          element: <SignIn />,
+        },
         {
           path: "/signin",
           element: <SignIn />,
@@ -67,23 +44,6 @@ export const AppRouter = () => {
         {
           path: "/reset-password",
           element: <ResetPassword />,
-        },
-        // Profile
-        {
-          path: "/setup/account",
-          element: <SetUpProfile currentTab={1} />,
-        },
-        {
-          path: "/setup/business-details",
-          element: <SetUpProfile currentTab={2} />,
-        },
-        {
-          path: "/setup/kyc",
-          element: <SetUpProfile currentTab={3} />,
-        },
-        {
-          path: "/verify-email",
-          element: <VerifyEmail />,
         },
       ],
     },

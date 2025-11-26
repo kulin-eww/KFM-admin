@@ -8,7 +8,7 @@ import useToast from "../../hooks/useToast";
 import { setAdminDetails } from "../../redux/slices/adminSlice";
 import FileUploadInput from "../../components/input/FileUploadInput";
 import AvatarUploadInput from "../../components/input/AvatarUploadInput";
-import { updateProfileAPI } from "../../api/vendor";
+import { updateProfileAPI } from "../../api/admin";
 import { useEffect, useState } from "react";
 import { listDumpYardAPI } from "../../api/dumpYard";
 import { BackArrowIcon, ChevronDownGreen } from "../../components/common/icons";

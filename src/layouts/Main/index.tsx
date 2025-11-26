@@ -5,7 +5,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useDispatch } from "react-redux";
 import { setAdminDetails } from "../../redux/slices/adminSlice";
-import { getVendorDetailsAPI } from "../../api/vendor";
+import { getAdminDetailsAPI } from "../../api/admin";
 import BreadcrumbsNav from "../../components/navigation/BreadcrumbsNav";
 import Loader from "../../components/Loader/Loader";
 import { useTranslation } from "react-i18next";
@@ -21,7 +21,7 @@ const Main = () => {
 
   const { data, isSuccess, isError, isFetched, isLoading } = useQuery({
     queryKey: ["profile"],
-    queryFn: getVendorDetailsAPI,
+    queryFn: getAdminDetailsAPI,
   });
 
   useEffect(() => {
@@ -33,11 +33,6 @@ const Main = () => {
   useEffect(() => {
     if (!token || token === undefined || token === null || token === "undefined" || token === "null") {
       navigate("/signin");
-    }
-    if (isSuccess) {
-      if (!data?.data?.is_kyc) {
-        navigate("/setup/account", { state: { email: data?.data?.email } });
-      }
     }
     if (isError) {
       localStorage.removeItem("token");
@@ -52,7 +47,7 @@ const Main = () => {
 
   return (
     <>
-      {!isLoading && isSuccess && data?.data?.is_kyc ? (
+      {!isLoading && isSuccess ? (
         <main className="flex h-screen bg-bg-secondary overflow-hidden">
           <Sidebar />
           <section className="flex-1 flex flex-col h-full overflow-hidden">

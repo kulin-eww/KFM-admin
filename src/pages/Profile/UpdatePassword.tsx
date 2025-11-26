@@ -5,7 +5,7 @@ import useToast from "../../hooks/useToast";
 import { useMutation } from "@tanstack/react-query";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import { changeVendorPasswordAPI } from "../../api/vendor";
+import { changeVendorPasswordAPI } from "../../api/admin";
 import { useTranslation } from "react-i18next";
 
 const UpdatePassword = () => {
