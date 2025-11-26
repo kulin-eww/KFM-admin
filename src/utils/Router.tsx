@@ -1,10 +1,8 @@
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import PageNotFound from "../pages/Errors/PageNotFound";
 import MainLayout from "../layouts/Main";
 import AuthLayout from "../layouts/Auth";
-import HomeLayout from "../layouts/Home";
-import Home from "../pages/Home";
 import SignIn from "../pages/Auth/SignIn";
 import ForgotPassword from "../pages/Auth/ForgotPassword";
 import ResetPassword from "../pages/Auth/ResetPassword";
@@ -15,10 +13,6 @@ import AddDriver from "../pages/Driver/AddDriver";
 import EditDriver from "../pages/Driver/EditDriver";
 import ViewDriver from "../pages/Driver/ViewDriver";
 import FAQ from "../pages/FAQ/FAQ";
-import Terms from "../pages/CMSPage/TermsCondition";
-import PrivacyPolicy from "../pages/CMSPage/PrivacyPolicy";
-import AboutUs from "../pages/CMSPage/AboutUs";
-import VerifyEmail from "../pages/Auth/VerifyEmail";
 import TermsConditionForm from "../pages/CMS/TermsConditionForm";
 import PrivacyPolicyForm from "../pages/CMS/PrivacyPolicyForm";
 import AboutUsForm from "../pages/CMS/AboutUsForm";

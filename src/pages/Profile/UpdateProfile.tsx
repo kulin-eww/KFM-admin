@@ -10,7 +10,6 @@ import FileUploadInput from "../../components/input/FileUploadInput";
 import AvatarUploadInput from "../../components/input/AvatarUploadInput";
 import { updateProfileAPI } from "../../api/admin";
 import { useEffect, useState } from "react";
-import { listDumpYardAPI } from "../../api/dumpYard";
 import { BackArrowIcon, ChevronDownGreen } from "../../components/common/icons";
 import { useTranslation } from "react-i18next";
 import { LENGTH, REGEX } from "../../utils/constant";
@@ -75,11 +74,6 @@ const UpdateProfile = () => {
       };
       submitProfile(payload);
     },
-  });
-
-  const { isLoading, isSuccess, isError, data } = useQuery({
-    queryKey: ["listDumpYards"],
-    queryFn: () => listDumpYardAPI(),
   });
 
   return (

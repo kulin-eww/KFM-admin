@@ -1,26 +1,23 @@
 import { useNavigate } from "react-router-dom";
-import {
-  ChevronRight,
-  DashbaoardPendingBookings,
-  DashboardCancelBookings,
-  DashboardSuccessfulBookings,
-  DashboardUpcompingBookings,
-  GraphIcon,
-} from "../../components/common/icons";
+import { ChevronRight } from "../../components/common/icons";
 import { useTranslation } from "react-i18next";
+import { GiMoneyStack } from "react-icons/gi";
+import { TbCategory } from "react-icons/tb";
+import { FiUsers } from "react-icons/fi";
+import { CgGames } from "react-icons/cg";
 
-const TotalBookings: React.FC<{ data: any }> = ({ data }) => {
-      const { t } = useTranslation();
+const TotalStats: React.FC<{ data: any }> = ({ data }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   return (
     <>
       <div className="bg-white p-6 rounded-xl shadow-sm">
-        <div className="text-lg font-medium text-text-primary"> {t("dashboard.totalBookings")}</div>
+        <div className="text-lg font-medium text-text-primary">Stats</div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
           <div
             className="rounded-xl p-4 mb-3 w-full col-span-2"
             style={{
-              background: "linear-gradient(180deg, #EDEDED 0%, #00FF94 100%)",
+              background: "linear-gradient(0deg, #91A459 0%, #C3DC78 100%)",
               borderRadius: "13px",
               padding: "2px",
             }}
@@ -33,17 +30,51 @@ const TotalBookings: React.FC<{ data: any }> = ({ data }) => {
             >
               <div>
                 <div className="text-sm flex items-center gap-2 font-semibold">
-                  <span>
-                    <DashboardSuccessfulBookings  />
+                  <span className="flex items-center justify-center rounded-lg bg-[#e4f7ec] w-8 h-8">
+                    <GiMoneyStack className="text-xl text-[#159B62]" />
                   </span>
-                 <span className="">{t("dashboard.successful")}</span>
+                  <span>Total Revenue</span>
                 </div>
-                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.successBookings}</div>
+                <div className="text-lg font-extrabold text-[#159B62] mt-3">{"10,000"}</div>
                 <div
                   className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/past-booking")}
                 >
-                 {t("dashboard.seeDetails")}
+                  {t("dashboard.seeDetails")}
+                  <span>
+                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="rounded-xl p-4 mb-3 w-full col-span-2"
+            style={{
+              background: "linear-gradient(0deg, #91A459 0%, #C3DC78 100%)",
+              borderRadius: "13px",
+              padding: "2px",
+            }}
+          >
+            <div
+              className="rounded-lg bg-white p-4 h-full"
+              style={{
+                borderRadius: "12px",
+              }}
+            >
+              <div>
+                <div className="text-sm flex items-center gap-2 font-semibold">
+                  <span className="flex items-center justify-center rounded-lg bg-[#e4f7ec] w-8 h-8">
+                    <TbCategory className="text-xl text-[#159B62]" />
+                  </span>
+                  <span>Total Categories</span>
+                </div>
+                <div className="text-lg font-extrabold text-[#159B62] mt-3">{15}</div>
+                <div
+                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  onClick={() => navigate("/past-booking")}
+                >
+                  {t("dashboard.seeDetails")}
                   <span>
                     <ChevronRight className="text-secondary rtl:rotate-180" />
                   </span>
@@ -54,7 +85,7 @@ const TotalBookings: React.FC<{ data: any }> = ({ data }) => {
           <div
             className="rounded-xl p-4 mb-3 w-full col-span-2 md:col-span-1"
             style={{
-              background: "linear-gradient(180deg, #EDEDED 0%, #00FF94 100%)",
+              background: "linear-gradient(0deg, #91A459 0%, #C3DC78 100%)",
               borderRadius: "13px",
               padding: "2px",
             }}
@@ -67,12 +98,12 @@ const TotalBookings: React.FC<{ data: any }> = ({ data }) => {
             >
               <div>
                 <div className="text-sm flex items-center gap-2 font-semibold">
-                  <span>
-                    <DashbaoardPendingBookings  />
+                  <span className="flex items-center justify-center rounded-lg bg-[#e4f7ec] w-8 h-8">
+                    <FiUsers className="text-xl text-[#159B62]" />
                   </span>
-                  {t("dashboard.pending")}
+                  <span>Total Players</span>
                 </div>
-                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.pendingBookings}</div>
+                <div className="text-lg font-extrabold text-[#159B62] mt-3">{999}</div>
                 <div
                   className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/all-booking")}
@@ -88,7 +119,7 @@ const TotalBookings: React.FC<{ data: any }> = ({ data }) => {
           <div
             className="rounded-xl p-4 mb-3 w-full col-span-2 md:col-span-1"
             style={{
-              background: "linear-gradient(180deg, #EDEDED 0%, #00FF94 100%)",
+              background: "linear-gradient(0deg, #91A459 0%, #C3DC78 100%)",
               borderRadius: "13px",
               padding: "2px",
             }}
@@ -101,51 +132,17 @@ const TotalBookings: React.FC<{ data: any }> = ({ data }) => {
             >
               <div>
                 <div className="text-sm flex items-center gap-2 font-semibold">
-                  <span>
-                    <DashboardCancelBookings  />
+                  <span className="flex items-center justify-center rounded-lg bg-[#e4f7ec] w-8 h-8">
+                    <CgGames className="text-xl text-[#159B62]" />
                   </span>
-                  {t("dashboard.cancelled")}
+                  <span>Total Games Played</span>
                 </div>
-                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.cancelledBookings}</div>
+                <div className="text-lg font-extrabold text-[#159B62] mt-3">{5}</div>
                 <div
                   className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/cancelled-booking")}
                 >
-                {t("dashboard.seeDetails")}
-                  <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="rounded-xl p-4 mb-3 w-full col-span-2"
-            style={{
-              background: "linear-gradient(180deg, #EDEDED 0%, #00FF94 100%)",
-              borderRadius: "13px",
-              padding: "2px",
-            }}
-          >
-            <div
-              className="rounded-lg bg-white p-4 h-full"
-              style={{
-                borderRadius: "12px",
-              }}
-            >
-              <div>
-                <div className="text-sm flex items-center gap-2 font-semibold">
-                  <span>
-                    <DashboardUpcompingBookings  />
-                  </span>
-                  {t("dashboard.upcoming")}
-                </div>
-                <div className="text-lg font-extrabold text-[#159B62] mt-3">{data?.upcomingBookings}</div>
-                <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
-                  onClick={() => navigate("/upcoming-booking")}
-                >
-                {t("dashboard.seeDetails")}
+                  {t("dashboard.seeDetails")}
                   <span>
                     <ChevronRight className="text-secondary rtl:rotate-180" />
                   </span>
@@ -159,4 +156,4 @@ const TotalBookings: React.FC<{ data: any }> = ({ data }) => {
   );
 };
 
-export default TotalBookings;
+export default TotalStats;

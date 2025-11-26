@@ -116,23 +116,22 @@ export const getMuiTheme = () => {
       MuiButton: {
         styleOverrides: {
           loadingIndicator: {
-            color: palette.buttonText,
+            color: "linear-gradient(180deg, #453C99 0%, #7364FF 100%)",
           },
           root: {
             background: "linear-gradient(180deg, #453C99 0%, #7364FF 100%)",
-            //            background: "linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary) 100%)",
+            color: palette.buttonText,
             borderRadius: "8px",
             textTransform: "none",
-            color: palette.buttonText,
-
-            // "&.Mui-disabled": {
-            //   backgroundColor: "#e0e0e0",
-            //   color: "#9e9e9e",
-            //   boxShadow: "none",
-            // },
-            loadingIndicator: {
-              color: palette.buttonText,
-            }
+            boxShadow: "none",
+            "&:hover": {
+              boxShadow: "none",
+              background: "linear-gradient(180deg, #453C99 0%, #7364FF 70%)",
+            },
+            "&.Mui-disabled": {
+              background: "linear-gradient(180deg, #e0e0e0 0%, #bdbdbd 100%)",
+              boxShadow: "none",
+            },
           },
         },
         variants: [
@@ -158,8 +157,7 @@ export const getMuiTheme = () => {
                 background: "linear-gradient(180deg, #453C99 0%, #7364FF 70%)",
               },
               "&.Mui-disabled": {
-                background: "linear-gradient(180deg, #453C99 0%, #7364FF 70%)",
-                color: palette.buttonText,
+                background: "linear-gradient(180deg, #e0e0e0 0%, #bdbdbd 100%)",
                 boxShadow: "none",
               },
             },
