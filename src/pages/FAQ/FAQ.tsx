@@ -35,7 +35,7 @@ const FAQ = () => {
 
   return (
     <div className="bg-layout-bg shadow-md rounded-xl px-6 py-4">
-      <h3 className="text-xl font-bold text-primary">{t("cms.faqTitle")}</h3>
+      <h3 className="text-xl font-bold">Frequently Asked Questions (FAQs)</h3>
       <div className="border-b border-[#E2E2E2] mt-4 mb-4"></div>
       <div className="divide-y divide-gray-200">
         {/* Loading */}

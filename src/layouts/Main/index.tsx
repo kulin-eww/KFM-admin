@@ -4,11 +4,7 @@ import Sidebar from "./Sidebar";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useDispatch } from "react-redux";
-import {
-  setIsVendorDetailsFetched,
-  setVendorBookingRequestTimeout,
-  setVendorDetails,
-} from "../../redux/slices/vendorSlice";
+import { setAdminDetails } from "../../redux/slices/adminSlice";
 import { getVendorDetailsAPI } from "../../api/vendor";
 import BreadcrumbsNav from "../../components/navigation/BreadcrumbsNav";
 import Loader from "../../components/Loader/Loader";
@@ -30,9 +26,7 @@ const Main = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      dispatch(setVendorDetails(data?.data));
-      dispatch(setIsVendorDetailsFetched(isFetched));
-      dispatch(setVendorBookingRequestTimeout(data?.timers));
+      dispatch(setAdminDetails(data?.data));
     }
   }, [data, isSuccess, isFetched]);
 
