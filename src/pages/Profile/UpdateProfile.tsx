@@ -53,15 +53,15 @@ const UpdateProfile = () => {
   } = useFormik({
     enableReinitialize: true,
     initialValues: {
-      name: adminDetails.full_name || "",
+      full_name: adminDetails.full_name || "",
       email: adminDetails.email || "",
     },
     validationSchema: Yup.object({
-      name: Yup.string()
+      full_name: Yup.string()
         .trim()
-        .required("Name is required")
-        .min(LENGTH.MIN_STRING_LENGTH, "Name must be at least 3 characters")
-        .max(LENGTH.MAX_STRING_LENGTH, "Name must be less than 255 characters"),
+        .required("Full name is required")
+        .min(LENGTH.MIN_STRING_LENGTH, "Full name must be at least 3 characters")
+        .max(LENGTH.MAX_STRING_LENGTH, "Full name must be less than 255 characters"),
       email: Yup.string()
         .required("Email is required")
         .email("Email is invalid")
@@ -69,7 +69,7 @@ const UpdateProfile = () => {
     }),
     onSubmit: (values) => {
       const payload: any = {
-        name: values.name,
+        full_name: values.full_name,
         email: values.email,
       };
       submitProfile(payload);
@@ -88,15 +88,15 @@ const UpdateProfile = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
               <TextField
                 fullWidth
-                label="Name"
-                name="name"
+                label="Full Name"
+                name="full_name"
                 type="text"
-                placeholder="Enter name"
-                value={profileValues.name}
+                placeholder="Enter full name"
+                value={profileValues.full_name}
                 onChange={handleProfileChange}
                 onBlur={handleProfileBlur}
-                error={profileTouched.name && Boolean(profileErrors.name)}
-                helperText={profileTouched.name && profileErrors.name}
+                error={profileTouched.full_name && Boolean(profileErrors.full_name)}
+                helperText={profileTouched.full_name && profileErrors.full_name}
               />
               <TextField
                 fullWidth
