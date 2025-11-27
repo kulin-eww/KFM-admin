@@ -29,7 +29,7 @@ export const formatTo12Hour = (time24: string) => {
 const UpdateProfile = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const userDetails = useAppSelector((state: RootState) => state.admin.adminDetails);
+  const adminDetails = useAppSelector((state: RootState) => state.admin.adminDetails);
   const queryClient = useQueryClient();
   const { mutate: submitProfile, isPending: isSavingProfile } = useMutation({
     mutationFn: updateProfileAPI,
@@ -53,8 +53,8 @@ const UpdateProfile = () => {
   } = useFormik({
     enableReinitialize: true,
     initialValues: {
-      name: userDetails.name || "",
-      email: userDetails.email || "",
+      name: adminDetails.full_name || "",
+      email: adminDetails.email || "",
     },
     validationSchema: Yup.object({
       name: Yup.string()

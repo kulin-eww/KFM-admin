@@ -227,7 +227,10 @@ const Sidebar = () => {
 
       {/* desktop sidebar */}
       <div className="hidden w-[250px] px-2 md:flex md:flex-col bg-white h-screen sticky top-0 left-0">
-        <div className="text-4xl flex justify-start items-center py-4 px-2 bg-white shrink-0">
+        <div
+          className="text-4xl flex justify-start items-center py-4 px-2 bg-white shrink-0 cursor-pointer"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={KfmNamedLogo} className="h-14 ml-1 block" />
         </div>
         <div className="flex-1 overflow-y-auto sidebar-scroll min-h-0">

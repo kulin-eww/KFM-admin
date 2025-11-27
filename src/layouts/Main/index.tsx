@@ -17,8 +17,6 @@ const Main = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // const isUserDetailsFetched = useAppSelector((state) => state.user.isVendorDetailsFetched);
-
   const { data, isSuccess, isError, isFetched, isLoading } = useQuery({
     queryKey: ["profile"],
     queryFn: getAdminDetailsAPI,

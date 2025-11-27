@@ -6,7 +6,7 @@ const TotalStats: React.FC<{ data: any; isLoading?: boolean }> = ({ data, isLoad
   return (
     <div className="w-[55%]">
       <div className="bg-white px-6 py-4 rounded-xl shadow-sm">
-        <div className="text-2xl font-bold text-[#7364FF] mb-4">Stats</div>
+        <div className="text-2xl font-bold mb-4">Stats</div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
           <StatsCard title="Total Revenue" value="10,000" type="purple" className="col-span-2" isLoading={isLoading} />
           <StatsCard title="Total Categories" value={15} type="coral" className="col-span-2" isLoading={isLoading} />

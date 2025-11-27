@@ -15,7 +15,7 @@ export const loginAPI = async (payload: { email: string; password: string }) => 
 
 export const forgotPasswordAPI = async (payload: { email: string }) => {
   try {
-    const response = await axiosInstance.post("/api/vendor/auth/forgot-password", payload);
+    const response = await axiosInstance.post("/api/admin/auth/forgot-password", payload);
     return response.data;
   } catch (error: any) {
     throw error.response.data;

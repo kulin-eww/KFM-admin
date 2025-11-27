@@ -1,4 +1,3 @@
-import NafathLogo from "../../assets/icons/common/nafath-logo.svg?react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button, IconButton, InputAdornment, TextField } from "@mui/material";

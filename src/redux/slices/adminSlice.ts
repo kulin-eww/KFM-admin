@@ -3,7 +3,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 interface adminState {
   adminDetails: {
     id: string;
-    name: string;
+    full_name: string;
     email: string;
   };
 }
@@ -11,7 +11,7 @@ interface adminState {
 const initialState: adminState = {
   adminDetails: {
     id: "",
-    name: "",
+    full_name: "",
     email: "",
   },
 };
