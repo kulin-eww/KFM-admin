@@ -30,31 +30,11 @@ const Header = () => {
   const dispatch = useAppDispatch();
   const { anchorElId, isNotificationOpen } = useAppSelector((state) => state.ui);
   const globalSearch = useSelector((state: any) => state?.globalSearch?.globalSearch);
-  const adminDetails = useSelector((state: any) => state?.admin);
+  const adminDetails = useSelector((state: any) => state?.admin?.adminDetails);
   const [openLogoutModal, setOpenLogoutModal] = useState(false);
 
   // List of routes where search should be displayed
-  const listRoutes = [
-    "/driver",
-    "/zone",
-    "/container",
-    "/all-booking",
-    "/new-booking",
-    "/active-booking",
-    "/upcoming-booking",
-    "/cancelled-booking",
-    "/past-booking",
-    "/booking-request",
-    "/early-pickup",
-    "/removal-request",
-    "/replacement-request",
-    "/grace-period",
-    "/booking-renewal",
-    "/earnings",
-    "/penalty-payment",
-    "/reports",
-    "/operations",
-  ];
+  const listRoutes = ["/player", "/faq"];
 
   // Check if current route is a list route (exact match and doesn't have detail/add/edit/view)
   const isListRoute = listRoutes.some((route) => {
@@ -144,10 +124,10 @@ const Header = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
                 <span className="text-black text-base">{t("header.hello")}</span>
-                <span className="text-purple text-base font-medium">{adminDetails?.name || "Admin"}</span>
+                <span className="text-purple text-base font-medium">{adminDetails?.full_name || "Admin"}</span>
               </div>
               <div className="flex items-center gap-1 cursor-pointer">
-                <span className="text-black text-sm">{adminDetails?.email}</span>
+                <span className="text-gray-600 text-sm">{adminDetails?.email}</span>
                 {/* <ChevronDownIcon className="h-4 w-4 text-[#007a47]" /> */}
               </div>
             </div>
@@ -167,7 +147,7 @@ const Header = () => {
               placeholder={t("header.searchPlaceholder")}
               value={globalSearch}
               onChange={(e) => dispatch(setGlobalSearch(e.target.value))}
-              className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg bg-gray-50 text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#007a47] focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg bg-gray-50 text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C3DC78] focus:border-transparent"
             />
           </div>
         )}
