@@ -110,6 +110,47 @@ body {
   background: linear-gradient(180deg, #453C99 0%, #7364FF 70%);
 }
 
+/* State Card Gradients */
+.state-card-green {
+  background: linear-gradient(180deg, #91A459 0%, #C3DC78 100%);
+}
+
+.state-card-green-number {
+  background: linear-gradient(180deg, #C3DC78 0%, #A8C86A 50%, #91A459 100%);
+}
+
+.state-card-purple {
+  background: linear-gradient(180deg, #453C99 0%, #7364FF 100%);
+}
+
+.state-card-purple-number {
+  background: linear-gradient(180deg, #7364FF 0%, #453C99 100%);
+}
+
+.state-card-orange {
+  background: linear-gradient(180deg, #FF8C42 0%, #FFB366 100%);
+}
+
+.state-card-orange-number {
+  background: linear-gradient(180deg, #FFB366 0%, #FF8C42 100%);
+}
+
+.state-card-coral {
+  background: linear-gradient(180deg, #FF9F7A 0%, #FFB89A 100%);
+}
+
+.state-card-coral-number {
+  background: linear-gradient(180deg, #FFB89A 0%, #FF9F7A 100%);
+}
+
+.state-card-maroon {
+  background: linear-gradient(180deg, #8B3A3A 0%, #A85555 100%);
+}
+
+.state-card-maroon-number {
+  background: linear-gradient(180deg, #A85555 0%, #8B3A3A 100%);
+}
+
 .sidebar-active {
   background-color: var(--color-hover-green) !important;
   color: #000000 !important;

@@ -47,8 +47,14 @@ const Dashboard = () => {
           />
         </div>
         <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-          <TotalStats data={handleGetDashboardDetails?.data?.data?.overView} />
-          <TotalQuestions data={handleGetDashboardDetails?.data?.data?.overView} />
+          <TotalStats
+            data={handleGetDashboardDetails?.data?.data?.overView}
+            isLoading={handleGetDashboardDetails?.isLoading}
+          />
+          <TotalQuestions
+            data={handleGetDashboardDetails?.data?.data?.overView}
+            isLoading={handleGetDashboardDetails?.isLoading}
+          />
         </div>
 
         {/* <div className="gap-4">
