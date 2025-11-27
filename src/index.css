@@ -58,6 +58,7 @@
   --color-green-3: #219564;
   --color-border-primary: #DFDFDF;
 
+  --color-text-secondary: var(--color-gray-600);
   --color-secondary: #B933FFCC;
 
   --color-purple: #7364FF;
@@ -76,8 +77,8 @@
   --color-layout-bg: var(--color-layout-bg);
   --font-changa: "Changa";
 
-  --color-text-secondary: var(--color-text-secondary);
   --color-text-primary: var(--color-text-primary);
+  --color-ts: var(--color-text-secondary);
   --color-text-tertiary: var(--color-text-tertiary);
   --color-hover-green: var(--color-hover-green);
   --color-primary: var(--color-primary);

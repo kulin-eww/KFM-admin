@@ -36,12 +36,12 @@ const TotalQuestions: React.FC<{ data: any }> = ({ data }) => {
                 </div>
                 <div className="text-lg font-extrabold text-[#159B62] mt-3">{96}</div>
                 <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  className="text-sm text-ts flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/past-booking")}
                 >
-                  {t("dashboard.seeDetails")}
+                  See Details
                   <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                    <ChevronRight className="text-ts rtl:rotate-180" />
                   </span>
                 </div>
               </div>
@@ -70,12 +70,12 @@ const TotalQuestions: React.FC<{ data: any }> = ({ data }) => {
                 </div>
                 <div className="text-lg font-extrabold text-[#159B62] mt-3">{50}</div>
                 <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  className="text-sm text-ts flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/all-booking")}
                 >
-                  {t("dashboard.seeDetails")}
+                  See Details
                   <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                    <ChevronRight className="text-ts rtl:rotate-180" />
                   </span>
                 </div>
               </div>
@@ -104,12 +104,12 @@ const TotalQuestions: React.FC<{ data: any }> = ({ data }) => {
                 </div>
                 <div className="text-lg font-extrabold text-[#159B62] mt-3">{47}</div>
                 <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  className="text-sm text-ts flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/cancelled-booking")}
                 >
-                  {t("dashboard.seeDetails")}
+                  See Details
                   <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                    <ChevronRight className="text-ts rtl:rotate-180" />
                   </span>
                 </div>
               </div>

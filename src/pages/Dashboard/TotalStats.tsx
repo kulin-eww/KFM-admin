@@ -35,14 +35,14 @@ const TotalStats: React.FC<{ data: any }> = ({ data }) => {
                   </span>
                   <span>Total Revenue</span>
                 </div>
-                <div className="text-lg font-extrabold text-[#159B62] mt-3">{"10,000"}</div>
+                <div className="text-lg  font-extrabold text-[#159B62] mt-3">{"10,000"}</div>
                 <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  className="text-sm text-ts flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/past-booking")}
                 >
-                  {t("dashboard.seeDetails")}
+                  See Details
                   <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                    <ChevronRight className="text-ts rtl:rotate-180" />
                   </span>
                 </div>
               </div>
@@ -71,12 +71,12 @@ const TotalStats: React.FC<{ data: any }> = ({ data }) => {
                 </div>
                 <div className="text-lg font-extrabold text-[#159B62] mt-3">{15}</div>
                 <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  className="text-sm text-ts flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/past-booking")}
                 >
-                  {t("dashboard.seeDetails")}
+                  See Details
                   <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                    <ChevronRight className="text-ts rtl:rotate-180" />
                   </span>
                 </div>
               </div>
@@ -105,12 +105,12 @@ const TotalStats: React.FC<{ data: any }> = ({ data }) => {
                 </div>
                 <div className="text-lg font-extrabold text-[#159B62] mt-3">{999}</div>
                 <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  className="text-sm text-ts flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/all-booking")}
                 >
-                  {t("dashboard.seeDetails")}
+                  See Details
                   <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                    <ChevronRight className="text-ts rtl:rotate-180" />
                   </span>
                 </div>
               </div>
@@ -139,12 +139,12 @@ const TotalStats: React.FC<{ data: any }> = ({ data }) => {
                 </div>
                 <div className="text-lg font-extrabold text-[#159B62] mt-3">{5}</div>
                 <div
-                  className="text-sm text-secondary flex items-center gap-2 cursor-pointer"
+                  className="text-sm text-ts flex items-center gap-2 cursor-pointer"
                   onClick={() => navigate("/cancelled-booking")}
                 >
-                  {t("dashboard.seeDetails")}
+                  See Details
                   <span>
-                    <ChevronRight className="text-secondary rtl:rotate-180" />
+                    <ChevronRight className="text-ts rtl:rotate-180" />
                   </span>
                 </div>
               </div>
