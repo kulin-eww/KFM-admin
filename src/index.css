@@ -52,15 +52,17 @@
 :root {
 
   --color-layout-bg: #FFFFFF;
-/* --color-layout-bg: #F7F7F7; */
+  /* --color-layout-bg: #F7F7F7; */
   --color-primary: #C3DC78;
   --color-hover-green: #C3DC78;
   --color-green-3: #219564;
   --color-border-primary: #DFDFDF;
 
+  --color-secondary: #B933FFCC;
+
+  --color-purple: #7364FF;
   --color-blue: #007bff;
   --color-indigo: #6610f2;
-  --color-purple: #7367f0;
   --color-pink: #e83e8c;
   --color-red: #ea5455;
   --color-warning: #ff8228;
@@ -97,6 +99,14 @@ body {
   font-family: var(--font-changa);
   background: var(--color-bg-secondary);
   color: var(--color-text-primary);
+}
+
+.purple-gradient-btn {
+  background: linear-gradient(180deg, #453C99 0%, #7364FF 100%);
+}
+
+.purple-gradient-btn:hover {
+  background: linear-gradient(180deg, #453C99 0%, #7364FF 70%);
 }
 
 .sidebar-active {

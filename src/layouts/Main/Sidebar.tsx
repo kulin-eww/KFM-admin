@@ -55,11 +55,11 @@ const Sidebar = () => {
       path: "/dashboard",
       icon: DashboardIcon,
     },
-    {
-      label: "Player Management",
-      path: "/player",
-      icon: GiTabletopPlayers,
-    },
+    // {
+    //   label: "Player Management",
+    //   path: "/player",
+    //   icon: GiTabletopPlayers,
+    // },
     // {
     //   label: "Game Category Management",
     //   path: "/container",
@@ -226,35 +226,33 @@ const Sidebar = () => {
       </div>
 
       {/* desktop sidebar */}
-      <div className="hidden w-[250px] px-2 md:block bg-white overflow-y-auto sidebar-scroll h-screen sticky top-0 left-0">
-        <div className="text-4xl flex justify-start items-center py-4 px-2 bg-white sticky top-0">
+      <div className="hidden w-[250px] px-2 md:flex md:flex-col bg-white h-screen sticky top-0 left-0">
+        <div className="text-4xl flex justify-start items-center py-4 px-2 bg-white shrink-0">
           <img src={KfmNamedLogo} className="h-14 ml-1 block" />
         </div>
-        <div className="flex flex-col h-full">
-          <div className="flex-1">
-            {navigationPaths.map(({ icon, label, path, onclick, isDisclosure, children }, index) => (
-              <SidebarNavItem
-                icon={icon}
-                label={label}
-                path={path}
-                key={index}
-                onClick={onclick}
-                isDisclosure={isDisclosure}
-                children={children}
-              />
-            ))}
-          </div>
+        <div className="flex-1 overflow-y-auto sidebar-scroll min-h-0">
+          {navigationPaths.map(({ icon, label, path, onclick, isDisclosure, children }, index) => (
+            <SidebarNavItem
+              icon={icon}
+              label={label}
+              path={path}
+              key={index}
+              onClick={onclick}
+              isDisclosure={isDisclosure}
+              children={children}
+            />
+          ))}
+        </div>
 
-          {/* Logout Button */}
-          <div className="mt-auto pt-4 pb-4 px-2 bg-white sticky bottom-0">
-            <button
-              onClick={() => setOpenLogoutModal(true)}
-              className="cursor-pointer w-full flex items-center gap-3 px-4 py-3 bg-[#E8F5E8] hover:bg-[#D4F0D4] rounded-lg transition-colors duration-200"
-            >
-              <LogoutIcon className="h-5 w-5 text-text-primary" />
-              <span className="text-text-primary text-[16px] font-medium">{t("sidebar.logout")}</span>
-            </button>
-          </div>
+        {/* Logout Button */}
+        <div className="pt-4 pb-4 px-2 bg-white shrink-0">
+          <button
+            onClick={() => setOpenLogoutModal(true)}
+            className="cursor-pointer w-full flex items-center gap-3 px-4 py-2 purple-gradient-btn rounded-lg transition-colors duration-200"
+          >
+            <LogoutIcon className="h-5 w-5 text-white" />
+            <span className="text-white text-[16px] font-medium">{t("sidebar.logout")}</span>
+          </button>
         </div>
       </div>
 

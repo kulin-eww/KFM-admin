@@ -37,7 +37,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="space-y-6">
+      <div className="space-y-4">
         <div className="flex justify-end">
           <DateRangeInput
             range={containerDateRange}

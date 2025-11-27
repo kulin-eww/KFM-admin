@@ -30,7 +30,7 @@ const Header = () => {
   const dispatch = useAppDispatch();
   const { anchorElId, isNotificationOpen } = useAppSelector((state) => state.ui);
   const globalSearch = useSelector((state: any) => state?.globalSearch?.globalSearch);
-  const vendor = useSelector((state: any) => state?.user);
+  const adminDetails = useSelector((state: any) => state?.admin);
   const [openLogoutModal, setOpenLogoutModal] = useState(false);
 
   // List of routes where search should be displayed
@@ -144,10 +144,10 @@ const Header = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1">
                 <span className="text-black text-base">{t("header.hello")}</span>
-                <span className="text-[#007a47] text-base font-medium">{vendor?.vendorDetails?.company_name}</span>
+                <span className="text-purple text-base font-medium">{adminDetails?.name || "Admin"}</span>
               </div>
               <div className="flex items-center gap-1 cursor-pointer">
-                <span className="text-black text-sm">{vendor?.vendorDetails?.kyc?.city}</span>
+                <span className="text-black text-sm">{adminDetails?.email}</span>
                 {/* <ChevronDownIcon className="h-4 w-4 text-[#007a47]" /> */}
               </div>
             </div>
