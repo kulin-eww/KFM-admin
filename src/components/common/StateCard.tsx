@@ -30,6 +30,17 @@ const StateCard: React.FC<StateCardProps> = ({
 
   const animatedValue = useCountUp(isLoading ? null : value, { duration: 1000 });
 
+  // Border colors based on type
+  const borderColorMap: Record<StateCardType, string> = {
+    green: "#91A459",
+    purple: "#7364FF",
+    orange: "#FF8C42",
+    coral: "#FF9F7A",
+    maroon: "#A85555",
+  };
+
+  const borderColor = borderColorMap[type];
+
   return (
     <div
       className={`rounded-xl bg-[#F5F5E8] p-4 h-full flex flex-col shadow-sm ${className} flex items-center justify-center`}
@@ -51,15 +62,10 @@ const StateCard: React.FC<StateCardProps> = ({
 
       {/* Title Section in Small Gradient Border Square */}
       <div
-        className={`px-10 py-4 rounded-full text-white font-semibold text-xl bg-gradient-to-b from-indigo-400 to-indigo-600
-        ${numberGradientClass}
-          border-3 border-${type}-500
-         shadow-[inset_0_8px_20px_rgba(0,0,0,0.35)]
-         transition-all duration-300
-         hover:shadow-none hover:brightness-110
-         w-full
-         text-center
-         `}
+        className={`px-10 py-4 rounded-full text-white font-semibold text-xl ${numberGradientClass} shadow-[inset_0_8px_20px_rgba(0,0,0,0.35)] transition-all duration-300 hover:shadow-none hover:brightness-110 w-full text-center`}
+        style={{
+          border: `3px solid ${borderColor}`,
+        }}
       >
         <div className="text-2xl font-bold text-white">{title}</div>
       </div>
