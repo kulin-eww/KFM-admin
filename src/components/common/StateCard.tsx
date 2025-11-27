@@ -31,19 +31,37 @@ const StateCard: React.FC<StateCardProps> = ({
   const animatedValue = useCountUp(isLoading ? null : value, { duration: 1000 });
 
   return (
-    <div className={`rounded-xl bg-[#F5F5E8] p-4 h-full flex flex-col shadow-sm ${className}`}>
+    <div
+      className={`rounded-xl bg-[#F5F5E8] p-4 h-full flex flex-col shadow-sm ${className} flex items-center justify-center`}
+    >
       {/* Number Display Section with Gradient Border */}
-      <div className={`rounded-lg p-[2px] ${gradientClass} mb-3`}>
+      <div className={`rounded-lg p-[2px]  w-[70%]  ${gradientClass} mb-3`}>
         <div className={`rounded-lg ${numberGradientClass} p-6 flex items-center justify-center min-h-[100px]`}>
-          <div className="text-5xl font-extrabold text-[#4A4A4A]">{animatedValue}</div>
+          <div
+            className="text-5xl font-extrabold text-white"
+            style={{
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3), 0 0 8px rgba(0,0,0,0.1)",
+              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.2))",
+            }}
+          >
+            {animatedValue}
+          </div>
         </div>
       </div>
 
       {/* Title Section in Small Gradient Border Square */}
-      <div className={`rounded-lg p-[2px] ${gradientClass} mb-3`}>
-        <div className="rounded-lg bg-white p-3 flex items-center justify-center">
-          <div className="text-sm font-semibold text-[#7364FF]">{title}</div>
-        </div>
+      <div
+        className={`px-10 py-4 rounded-full text-white font-semibold text-xl bg-gradient-to-b from-indigo-400 to-indigo-600
+        ${numberGradientClass}
+          border-3 border-${type}-500
+         shadow-[inset_0_8px_20px_rgba(0,0,0,0.35)]
+         transition-all duration-300
+         hover:shadow-none hover:brightness-110
+         w-full
+         text-center
+         `}
+      >
+        <div className="text-2xl font-bold text-white">{title}</div>
       </div>
 
       {/* Optional Button */}
