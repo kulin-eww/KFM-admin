@@ -18,7 +18,7 @@ export const updateProfileAPI = async (payload: {
   dumping_yards: string[];
 }) => {
   try {
-    const response = await axiosInstance.put("/api/vendor/profileUpdate", payload);
+    const response = await axiosInstance.put("/api/admin/auth/profileUpdate", payload);
     return response.data;
   } catch (error: any) {
     throw error.response?.data || error;
@@ -27,7 +27,7 @@ export const updateProfileAPI = async (payload: {
 
 export const changeAdminPasswordAPI = async (payload: { oldPassword: string; newPassword: string }) => {
   try {
-    const response = await axiosInstance.post("/api/vendor/change-password", payload);
+    const response = await axiosInstance.post("/api/admin/auth/change-password", payload);
     return response.data;
   } catch (error: any) {
     throw error.response.data;

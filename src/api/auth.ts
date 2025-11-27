@@ -35,8 +35,7 @@ export const resetPasswordAPI = async (payload: { token: string; newPassword: st
 
 export const logoutAPI = async () => {
   try {
-    // const response = await axiosInstance.get("/api/vendor/auth/logout");
-    const response = { data: { message: "Logged out successfully" } };
+    const response = await axiosInstance.get("/api/admin/auth/logout");
     localStorage.clear();
     sessionStorage.clear();
     return response.data;
