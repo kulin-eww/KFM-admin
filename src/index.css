@@ -151,6 +151,69 @@ body {
   background: linear-gradient(180deg, #A85555 0%, #8B3A3A 100%);
 }
 
+/* Stats Card Banner Gradients */
+.stats-card-banner-green {
+  background: linear-gradient(to right, #91A459 0%, #C3DC78 100%);
+}
+
+.stats-card-banner-purple {
+  background: linear-gradient(to right, #453C99 0%, #7364FF 100%);
+}
+
+.stats-card-banner-orange {
+  background: linear-gradient(to right, #FF8C42 0%, #FFB366 100%);
+}
+
+.stats-card-banner-coral {
+  background: linear-gradient(to right, #FF9F7A 0%, #FFB89A 100%);
+}
+
+.stats-card-banner-maroon {
+  background: linear-gradient(to right, #8B3A3A 0%, #A85555 100%);
+}
+
+/* Stats Card Background Colors */
+.stats-card-bg-green {
+  background: #E8F5E8;
+}
+
+.stats-card-bg-purple {
+  background: #E8E8F0;
+}
+
+.stats-card-bg-orange {
+  background: #FFF4E8;
+}
+
+.stats-card-bg-coral {
+  background: #FFF0E8;
+}
+
+.stats-card-bg-maroon {
+  background: #F5E8E8;
+}
+
+/* Stats Card Bottom Bar Colors */
+.stats-card-bottom-green {
+  background: #D4E8D4;
+}
+
+.stats-card-bottom-purple {
+  background: #D8D8E8;
+}
+
+.stats-card-bottom-orange {
+  background: #FFE8D4;
+}
+
+.stats-card-bottom-coral {
+  background: #FFE0D4;
+}
+
+.stats-card-bottom-maroon {
+  background: #E8D4D4;
+}
+
 .sidebar-active {
   background-color: var(--color-hover-green) !important;
   color: #000000 !important;

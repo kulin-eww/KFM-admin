@@ -1,21 +1,35 @@
 import React from "react";
 import useCountUp from "../../hooks/useCountUp";
 
+export type StatsCardType = "green" | "purple" | "orange" | "coral" | "maroon";
+
 interface StatsCardProps {
   title: string;
   value: string | number;
   bottomIcons?: React.ReactNode[];
   className?: string;
   isLoading?: boolean;
+  type?: StatsCardType;
 }
 
-const StatsCard: React.FC<StatsCardProps> = ({ title, value, bottomIcons, className = "", isLoading = false }) => {
+const StatsCard: React.FC<StatsCardProps> = ({
+  title,
+  value,
+  bottomIcons,
+  className = "",
+  isLoading = false,
+  type = "purple",
+}) => {
   const animatedValue = useCountUp(isLoading ? null : value, { duration: 1000 });
 
+  const bannerClass = `stats-card-banner-${type}`;
+  const bgClass = `stats-card-bg-${type}`;
+  const bottomBarClass = `stats-card-bottom-${type}`;
+
   return (
-    <div className={`rounded-xl bg-[#E8E8F0] p-0 overflow-hidden shadow-lg ${className}`}>
-      {/* Purple Banner */}
-      <div className="bg-gradient-to-r from-[#453C99] to-[#7364FF] px-4 py-3 rounded-t-xl">
+    <div className={`rounded-xl ${bgClass} p-0 overflow-hidden shadow-lg ${className}`}>
+      {/* Colored Banner */}
+      <div className={`${bannerClass} px-4 py-3 rounded-t-xl`}>
         <h3
           className="text-white font-bold text-base text-center"
           style={{ textShadow: "1px 1px 2px rgba(0,0,0,0.2)" }}
@@ -25,7 +39,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, bottomIcons, classN
       </div>
 
       {/* Main Content Area with Large Number */}
-      <div className="bg-[#E8E8F0] px-4 py-8 flex items-center justify-center min-h-[120px]">
+      <div className={`${bgClass} px-4 py-8 flex items-center justify-center min-h-[120px]`}>
         <div
           className="text-5xl font-extrabold text-white"
           style={{
@@ -39,7 +53,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value, bottomIcons, classN
 
       {/* Bottom Icons Bar */}
       {bottomIcons && bottomIcons.length > 0 && (
-        <div className="bg-[#D8D8E8] px-4 py-3 rounded-b-xl flex items-center justify-around">
+        <div className={`${bottomBarClass} px-4 py-3 rounded-b-xl flex items-center justify-around`}>
           {bottomIcons.map((icon, index) => (
             <div key={index} className="flex items-center justify-center">
               {icon}
